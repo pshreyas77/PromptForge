@@ -4,8 +4,8 @@ import { Tone, ModelLength, PromptRequest, Persona, PromptMode, TrainingExample 
 
 // Initialize the client. 
 // Note: In a real production app, ensure strict backend proxying if keys are sensitive, 
-// though for this specific request, we follow the instruction to use process.env.API_KEY directly.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// though for this specific request, we follow the instruction to use import.meta.env.VITE_GEMINI_API_KEY directly.
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 const GENERATE_SYSTEM_INSTRUCTION = `
 You are a world-class Prompt Engineer and LLM Architect. 
